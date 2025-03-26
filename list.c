@@ -47,8 +47,8 @@ void * nextList(List * list) {
     el nodo es el que tiene prev, next y data;*/
     if(list->current != NULL)
     {
-        list->current = list->current->next; 
-        return list->current->data;
+        list->current = list->current->next;
+        return; 
     }
     else                                         
         return NULL;
