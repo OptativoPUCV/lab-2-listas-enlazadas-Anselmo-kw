@@ -37,7 +37,7 @@ List * createList() {
 }
 
 void * firstList(List * list) {
-    if(list->head == NULL)
+    if(list->head == NULL || list == NULL) //caso tambien donde la lista está vacía
         return NULL;
     
     return list->head->data;
