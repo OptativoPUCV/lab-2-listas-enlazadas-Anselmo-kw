@@ -45,11 +45,7 @@ void * firstList(List * list) {
 }
 
 void * nextList(List * list) {
-    while(list->next != NULL)
-    {
-
-
-    }
+    
 }
 
 void * lastList(List * list) {
