@@ -50,9 +50,7 @@ void * nextList(List * list) {
 
     list->current = list->current->next; //el current se actualiza al siguiente;
 
-    if (list->current == NULL) {
-        return NULL;
-    }
+    
     return list->current->data;
 }
 
