@@ -61,7 +61,7 @@ void * lastList(List * list) {
     if(list == NULL || list->tail == NULL) //caso tambien donde la lista está vacía
         return NULL;
 
-    list->current = list->tail->data;
+    list->current = list->tail;
     return list->current->data;
 }
 
