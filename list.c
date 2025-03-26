@@ -43,12 +43,14 @@ void * firstList(List * list) {
 }
 
 void * nextList(List * list) {
+    /* head, current, y tail es de lista 
+    el nodo es el que tiene prev, next y data;*/
     if(list->current != NULL)
     {
-        list->current = list->current->next; //head, current, y tail es de lista
+        list->current = list->current->next; 
         return list->current->data;
     }
-    else                                        //el nodo es el que tiene prev, next y data; 
+    else                                         
         return NULL;
 }
 
