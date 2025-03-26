@@ -45,13 +45,13 @@ void * firstList(List * list) {
 void * nextList(List * list) {
     /* head, current, y tail es de lista 
     el nodo es el que tiene prev, next y data;*/
-    if(list->current == NULL)
+    if(list->current != NULL){
+        list->current = list->current->next; //el current se actualiza al siguiente;
+        return list->current->data;
+    }
+    else
         return NULL;
 
-    list->current = list->current->next; //el current se actualiza al siguiente;
-
-    
-    return list->current->data;
 }
 
 void * lastList(List * list) {
