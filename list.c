@@ -48,7 +48,7 @@ void * nextList(List * list) {
     if(list->current == NULL || list == NULL) //intento de hacerlo al revez
         return NULL;
 
-    list->current = list->current->data; //se actualiza el current
+    list->current = list->current->next; //se actualiza el current
 
     if(list->current == NULL)
         return NULL;
