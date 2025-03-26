@@ -60,7 +60,9 @@ void * nextList(List * list) {
 void * lastList(List * list) {
     if(list == NULL || list->tail == NULL) //caso tambien donde la lista está vacía
         return NULL;
-    return list->tail->data;
+
+    list->current = list->tail->data;
+    return list->current->data;
 }
 
 void * prevList(List * list) {
