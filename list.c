@@ -155,8 +155,10 @@ void * popCurrent(List * list) {
 
     //pero debo ver si queda vacia
     if(list->head == NULL)
+    {
         list->tail = NULL; //preguntar por esto
-
+        list->current = NULL;
+    }
     free(actual->data);
     free(actual);
 
