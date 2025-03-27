@@ -126,7 +126,7 @@ void * popCurrent(List * list) {
     Node * actual = list->current;
 
     //Head
-    if(list->current == NULL) //si esta en el head
+    if(actual->prev == NULL) //si esta en el head// leelo de derecha a isquierda para entender mejor
     {
         list->head = actual->next;
         if(list->head != NULL) //si no tiene 1 solo nodo
@@ -149,8 +149,8 @@ void * popCurrent(List * list) {
 
     list->current = actual->next;
 
+    free(actual->data);
     free(actual);
-    return list->current->data;
 
     /*
     Node * izq = list->current->prev;
