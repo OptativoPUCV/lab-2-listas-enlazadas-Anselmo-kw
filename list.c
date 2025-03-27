@@ -123,16 +123,21 @@ void * popCurrent(List * list) {
     if(list == NULL || list->current == NULL )
         return NULL;
 
-    if(list->current->next == NULL || list->current->prev == NULL)
-        free(list->current);
-    
+    if(list->current->prev == NULL) //esta en el head
+    {
+        list->current = list->head;
+        list->current->next = list->head;
+        list->current = NULL;
+    }
+    /*
     Node * izq = list->current->prev;
     Node* der = list->current->next;
 
     izq->next = der;
     der->prev = izq;
+
     free(list->current);
-    list->current = NULL;
+    list->current = NULL;*/
 }
 
 void cleanList(List * list) {
