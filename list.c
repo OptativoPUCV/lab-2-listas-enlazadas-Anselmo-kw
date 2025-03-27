@@ -75,7 +75,7 @@ void * prevList(List * list) {
 
 void pushFront(List * list, void * data) {
     if(list == NULL)
-        return;
+        return; //al parecer si retorno NULL me da error, quisas sea porque es una accion?
     Node * newNodo = createNode(data);
     newNodo->data = data;
     newNodo->prev = NULL; //se va a insertar al primero pss, antes no hay nada
@@ -95,12 +95,13 @@ void pushBack(List * list, void * data) {
 }
 
 void pushCurrent(List * list, void * data) {
-    /*Node * newNodo = createNode(data);
+    if(list == NULL || list->current == NULL)
+        return NULL;
+    Node * newNodo = createNode(data);
     newNodo->prev = list->current;
     newNodo->next = list->current->next;
     newNodo->prev->next = newNodo;
-    newNodo->next->prev = newNodo;*/
-
+    newNodo->next->prev = newNodo;
 }
 
 void * popFront(List * list) {
