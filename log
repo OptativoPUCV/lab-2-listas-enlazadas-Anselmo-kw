@@ -328,3 +328,14 @@ list.c:132:1: error: control reaches end of non-void function [-Werror=return-ty
 cc1.exe: all warnings being treated as errors
 Compilation failed
 f776b26
+Thu, Mar 27, 2025  8:07:41 PM: 
+ list.c | 5 ++++-
+ 1 file changed, 4 insertions(+), 1 deletion(-)
+In file included from test.c:5:
+list.c: In function 'popCurrent':
+list.c:135:1: error: control reaches end of non-void function [-Werror=return-type]
+  135 | }
+      | ^
+cc1.exe: all warnings being treated as errors
+Compilation failed
+5c28a83
