@@ -432,3 +432,9 @@ Thu, Mar 27, 2025  8:50:33 PM:
  tests:  12|0
 total_score: 70/70
 82a60fe
+Thu, Mar 27, 2025  8:51:51 PM: 
+ list.c | 10 ++--------
+ 1 file changed, 2 insertions(+), 8 deletions(-)
+ tests:  12|0
+total_score: 70/70
+ece32a0

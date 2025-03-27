@@ -135,19 +135,13 @@ void * popCurrent(List * list) {
             list->head->prev = NULL;
     }
     else
-    {
         actual->prev->next = actual->next;
-    }
 
     //Tail
     if(actual->next != NULL) //si no esta al final
-    {
         actual->next->prev = actual->prev;
-    }
     else
-    {
         list->tail = actual->prev;//entender esto mejor
-    }
 
     //debo mover el current
     if(actual->next != NULL)
@@ -158,7 +152,7 @@ void * popCurrent(List * list) {
     //pero debo ver si queda vacia
     if(list->head == NULL)
     {
-        list->tail = NULL; //preguntar por esto
+        list->tail = NULL; //actualizo todo
         list->current = NULL;
     }
     free(actual->data);
@@ -173,7 +167,7 @@ void * popCurrent(List * list) {
 
     free(list->current);
     list->current = NULL;*/
-    return data;
+    return data;//preguntar porque devo retonar data
 }
 
 void cleanList(List * list) {
