@@ -103,8 +103,10 @@ void pushCurrent(List * list, void * data) {
     newNodo->next = list->current->next;
     list->current->next = newNodo;
 
-    newNodo->prev->next = newNodo;
-    newNodo->next->prev = newNodo;
+    if(newNodo->next != NULL) // si hay un nodo despues
+        newNodo->next->prev = newNodo;
+    else
+        list->tail = newNodo; //si no, es el ultimo;
 }
 
 void * popFront(List * list) {
