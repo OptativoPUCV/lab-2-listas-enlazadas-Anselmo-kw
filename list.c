@@ -66,7 +66,7 @@ void * lastList(List * list) {
 }
 
 void * prevList(List * list) {
-    if(list == NULL || list->current == NULL || list->current->prev == NULL)
+    if(list == NULL || list->current == NULL || list->current->prev == NULL) //acede a todos los casos
         return NULL;
     
     list->current = list->current->prev;
@@ -74,6 +74,15 @@ void * prevList(List * list) {
 }
 
 void pushFront(List * list, void * data) {
+
+    Node * newNodo = (Node*) malloc(sizeof(Node));
+    newNodo->data = data;
+    newNodo->prev = NULL; //se va a insertar al primero pss, antes no hay nada
+    newNodo->next = list->head; //y el siguiente va a pasar a ser el antiguo primero
+    if(list->head)
+        list->head->prev = newNodo; // aqui se termina de elazar el antiguo primero con el actual
+    
+    list->head = newNodo;
 }
 
 void pushBack(List * list, void * data) {
