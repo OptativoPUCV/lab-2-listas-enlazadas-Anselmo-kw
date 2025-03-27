@@ -125,6 +125,7 @@ void * popCurrent(List * list) {
 
     Node * actual = list->current;
 
+    void *data = actual->data;
     //Head
     if(actual->prev == NULL) //si esta en el head// leelo de derecha a isquierda para entender mejor
     {

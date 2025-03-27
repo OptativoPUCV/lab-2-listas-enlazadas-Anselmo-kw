@@ -415,3 +415,14 @@ Thu, Mar 27, 2025  8:48:17 PM:
  1 file changed, 1 insertion(+)
  tests:  0|0
 cb54ed7
+Thu, Mar 27, 2025  8:49:47 PM: 
+ list.c | 1 +
+ 1 file changed, 1 insertion(+)
+In file included from test.c:5:
+list.c: In function 'popCurrent':
+list.c:128:11: error: unused variable 'data' [-Werror=unused-variable]
+  128 |     void *data = actual->data;
+      |           ^~~~
+cc1.exe: all warnings being treated as errors
+Compilation failed
+6368da6
