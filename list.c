@@ -98,8 +98,11 @@ void pushCurrent(List * list, void * data) {
     if(list == NULL || list->current == NULL)
         return; //creo que al no ser "punteros" a void no puedo retornar null porf ejemplo
     Node * newNodo = createNode(data);
+
     newNodo->prev = list->current;
     newNodo->next = list->current->next;
+    list->current->next = newNodo;
+
     newNodo->prev->next = newNodo;
     newNodo->next->prev = newNodo;
 }
