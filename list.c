@@ -74,13 +74,17 @@ void * prevList(List * list) {
 }
 
 void pushFront(List * list, void * data) {
-
+    if(list == NULL)
+        return NULL;
     Node * newNodo = createNode(data);
     newNodo->data = data;
     newNodo->prev = NULL; //se va a insertar al primero pss, antes no hay nada
     newNodo->next = list->head; //y el siguiente va a pasar a ser el antiguo primero
     if(list->head)
         list->head->prev = newNodo; // aqui se termina de elazar el antiguo primero con el actual
+    //caso de lista vacia
+    else
+        list->tail = newNodo; //al estar vacia, pasa a ser el priemro y el ultimo;
     
     list->head = newNodo;
 }
