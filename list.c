@@ -147,7 +147,11 @@ void * popCurrent(List * list) {
         list->tail = actual->prev;//entender esto mejor
     }
 
-    list->current = actual->next;
+    //debo mover el current
+    if(actual->next != NULL)
+        list->current = actual->next;
+    else
+        list->current = actual->prev;
 
     free(actual->data);
     free(actual);
