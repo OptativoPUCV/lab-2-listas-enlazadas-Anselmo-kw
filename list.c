@@ -95,7 +95,7 @@ void pushBack(List * list, void * data) {
 }
 
 void pushCurrent(List * list, void * data) {
-    if(list == NULL || list->current == NULL)
+    if(list->current == NULL)
         return; //creo que al no ser "punteros" a void no puedo retornar null porf ejemplo
     Node * newNodo = createNode(data);
 
