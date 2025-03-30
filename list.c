@@ -167,7 +167,7 @@ void * popCurrent(List * list) {
 
     free(list->current);
     list->current = NULL;*/
-    return data;//preguntar porque devo retonar data
+    return data;//preguntar porque debo retonar data
 }
 
 void cleanList(List * list) {
