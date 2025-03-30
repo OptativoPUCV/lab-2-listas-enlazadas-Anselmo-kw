@@ -128,8 +128,8 @@ void * popCurrent(List * list) {
     void *data = actual->data;
 
     //Head
-    if(actual->prev == NULL) //si esta en el head// leelo de derecha a isquierda para entender mejor
-    {
+    if(actual->prev == NULL) //si esta en el head// leelo de derecha a izquierda para entender mejor
+    {                                             //el previo del actual (actual->prev)
         list->head = actual->next;
         if(list->head != NULL) //si no tiene 1 solo nodo
             list->head->prev = NULL;
@@ -157,16 +157,6 @@ void * popCurrent(List * list) {
     }
     free(actual->data);
     free(actual);
-
-    /*
-    Node * izq = list->current->prev;
-    Node* der = list->current->next;
-
-    izq->next = der;
-    der->prev = izq;
-
-    free(list->current);
-    list->current = NULL;*/
     return data;//preguntar porque debo retonar data
 }
 
